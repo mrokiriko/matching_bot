@@ -131,18 +131,18 @@ def get_state(message):
 @bot.message_handler(commands=['upload'])
 def set_upload_state(message):
     set_state(message, 0)
-    bot.send_message(message.chat.id, "Отправьте боту изображения для пополнения базы данных утекших изображений")
+    bot.send_message(message.chat.id, "Отправьте боту изображения для пополнения базы данных")
 
 
 @bot.message_handler(commands=['search'])
 def set_search_state(message):
     set_state(message, 1)
-    bot.send_message(message.chat.id, "Отправьте боту изображения для поиска по базе данных утекших изображений")
+    bot.send_message(message.chat.id, "Отправьте боту изображения для поиска по базе данных изображений")
 
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.send_message(message.chat.id, "Команды для работы с базой данных утекших изображений:\n" +
+    bot.send_message(message.chat.id, "Команды для работы с базой данных изображений:\n" +
                                       "/upload - Пополнение базы данных\n/search - Поиск по базе данных")
 
 
@@ -184,7 +184,7 @@ def image_match(message):
         print('db_pic', db_pic)
 
         if result:
-            bot.reply_to(message, "По вашему изображению нашлось совпадение в базе данных утекших фотографий")
+            bot.reply_to(message, "По вашему изображению нашлось совпадение в базе данных")
             bot.send_photo(message.chat.id, db_pic.replace('.jpg', ''))
         else:
             bot.reply_to(message, "По вашему изображению не нашлось совпадений")
