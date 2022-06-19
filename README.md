@@ -1,6 +1,8 @@
 # Telegram Bot for Image Matching
 
-First upload images to database and then check if new images are already in using [magic]()
+First upload images to database and then check if new images are already in using [magic](https://imgur.com/a/bkFr3RV)
+
+You can [try out](https://t.me/DiplomNa5Bot) live bot version
 
 ### Setup
 ```bash
